@@ -1,10 +1,20 @@
-<h1>Create a new task</h1>
-<%= form_with model: @task do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.label :completed %>
-  <%= f.text_field :completed %>
-  <%= f.submit %>
-<% end %>
+<div class="text-center">
+  <h1> 📑 Create New Task 📑</h1>
+  <br>
+  <p>
+    <%= form_with model: @task do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= f.label :details %>
+      <%= f.text_field :details %>
+      <%= f.label :completed %>
+      <%= f.text_field :completed %>
+      <%= f.submit %>
+    <% end %>
+  </p>
+</div>
+<br>
+
+<div class="text-center">
+  <button type="button" class="btn btn-dark"><%= link_to "Back to Task List", all_tasks_path %></button>
+</div>

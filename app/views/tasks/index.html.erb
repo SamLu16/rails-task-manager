@@ -1,6 +1,19 @@
-<h1>My Tasks:</h1>
-<ol>
-<% @tasks.each do |task| %>
-  <li><%= link_to task.title, task_path(task) %></li>
-<% end %>
-</ol>
+<div class="text-center">
+ <h1> 📑 Task Manager 📑 </h1>
+ <img src="https://media.giphy.com/media/eKfovWZOlOpbTDEX9F/giphy.gif" alt="gif" class="rounded">
+</div>
+<br>
+
+<div class="text-center">
+  <h3 class="text-danger"> Tasks List to Tackle:</h3>
+  <% @tasks.each do |task| %>
+    <ul class="list-group">
+        <li><%= link_to task.title, task_path(task) %></li>
+    </ul>
+  <% end %>
+</div>
+<br>
+
+<div class="text-center">
+  <span class="material-symbols-outlined">Add_circle</span><%= link_to "Add Task", create_task_path %>
+</div>
